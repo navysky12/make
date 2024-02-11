@@ -4,3 +4,8 @@ A collection of makefiles made for automating installation of various scripts an
 
 ---
 
+### current branches:
+- **dot** - for installation of dotfiles utilizing stow
+
+---
+
