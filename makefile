@@ -26,7 +26,7 @@ work:
 				mkdir -p "work/$$parent_path"; \
 				relative_path=$$(realpath --relative-to="work/$$parent_path" \
 					"$$dir/$$path_to_module"); \
-				ln -sf "$$relative_path" "work/$$path_to_module"; \
+				ln -sfn "$$relative_path" "work/$$path_to_module"; \
 			done < .modules; \
 			rm .modules; \
 		fi; \

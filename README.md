@@ -51,9 +51,9 @@ dot/
 ├── work/
 │   ├── .config/
 │   │   ├── app_priv/
-│   │   |   └── app.conf -> ../../pub_dotfiles.git/.config/app_priv/app.conf
+│   │   |   └── app.conf -> ../../../pub_dotfiles.git/.config/app_priv/app.conf
 │   │   ├── app_pub/
-│   │   |   └── init.lua -> ../../pub_dotfiles.git/.config/app_pub/init.lua
+│   │   |   └── init.lua -> ../../../pub_dotfiles.git/.config/app_pub/init.lua
 │   │   ├── submodule_priv.git -> ../../priv_dotfiles.git/.config/submodule_priv.git
 │   │   ├── submodule_pub.git -> ../../pub_dotfiles.git/.config/submodule_pub.git
 │   │   ├── config_priv.txt -> ../../priv_dotfiles.git/.config/config_priv.txt
@@ -61,7 +61,7 @@ dot/
 │   └── .profile -> ../pub_dotfiles.git/.profile
 └── makefile
 ```
-Note that the submodule repo directories have their whole folder linked to avoid excessive link creation. `.git` is ignored by stow's native ignore lists and `.gitignore` is ignored by dot's makefile submodule functionality.
+Note that the submodule repo directories have their whole folder linked to avoid excessive link creation. `.git` is ignored by stow's native ignore lists and `.gitmodules` is ignored by dot's makefile submodule functionality.
 
 Run `make stow`:
 ```
