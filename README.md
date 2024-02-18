@@ -61,7 +61,8 @@ dot/
 │   └── .profile -> ../pub_dotfiles.git/.profile
 └── makefile
 ```
-Note that the submodule repo directories have their whole folder linked to avoid excessive link creation. `.git` is ignored by stow's native ignore lists and `.gitmodules` is ignored by dot's makefile submodule functionality.
+Note that the submodule repo directories have their whole folder linked to avoid excessive link creation.
+`.git` is ignored by stow's native ignore lists and `.gitmodules` is ignored by dot's makefile submodule functionality.
 
 Run `make stow`:
 ```

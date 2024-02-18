@@ -16,7 +16,7 @@ work:
 	for dir in */ ; do \
 		dir=$${dir%/}; \
 		if ! echo $(EXCLUDES) | grep -qw "$$dir"; then \
-			find "$$dir" -name '.gitmodules' -exec \
+			find "$$dir" -maxdepth 1 -name '.gitmodules' -exec \
 				sed -n 's/^[ \t]*path = //p' {} \; > .modules; \
 			stow_exclusions=$$(awk -F'/' '{print "|" $$NF}' .modules | paste -sd '' -); \
 			stow --target="work/" --ignore="(\.gitmodules$${stow_exclusions})" --no-folding "$$dir"; \
